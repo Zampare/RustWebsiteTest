@@ -22,10 +22,14 @@ fn app() -> Html {
 
     html! {
         <div>
-            <button {onclick}>
-                { "+1" }
-            </button>
-            <p>{ state.value }</p>
+            <form action = >
+                <label for="lifts">Choose a lift:</label>
+                <select name="lifts" id="lift select">
+                    <option value="Bench">Bench</option>
+                    <option value="Squat">Squat</option>
+                    <option value="Deadlift">Deadlift</option>
+                </select>
+            </form>
         </div>
     }
 }
