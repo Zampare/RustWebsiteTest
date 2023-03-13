@@ -3,14 +3,6 @@
 version = 3
 
 [[package]]
-name = "RustWebsiteTest"
-version = "0.1.0"
-dependencies = [
- "wasm-pack",
- "yew",
-]
-
-[[package]]
 name = "addr2line"
 version = "0.19.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2121,6 +2113,14 @@ dependencies = [
  "blake2b_simd",
  "constant_time_eq",
  "crossbeam-utils 0.8.15",
+]
+
+[[package]]
+name = "rust_website_test"
+version = "0.1.0"
+dependencies = [
+ "wasm-pack",
+ "yew",
 ]
 
 [[package]]

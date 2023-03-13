@@ -1,5 +1,5 @@
 [package]
-name = "RustWebsiteTest"
+name = "rust_website_test"
 version = "0.1.0"
 edition = "2021"
 
