@@ -28,7 +28,7 @@ struct Lift{
 #[function_component(App)]
 fn app() -> Html {
     let lifts = use_state(|| vec![]);
-    let submitlift = use_state(|| NewLift::default());
+    let submitlift = use_state(|| NewLift { lift: "Deadlift".to_string(), ..Default::default()});
     {
         let lifts = lifts.clone();
         use_effect_with_deps(move |_|{
