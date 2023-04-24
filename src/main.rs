@@ -1,3 +1,5 @@
+use std::path::Iter;
+
 use serde::{Serialize, Deserialize};
 use wasm_bindgen::{JsCast, JsValue};
 use yew::prelude::*;
@@ -28,7 +30,7 @@ struct Lift{
 #[function_component(App)]
 fn app() -> Html {
     let lifts = use_state(|| vec![]);
-    let submitlift = use_state(|| NewLift { lift: "Deadlift".to_string(), ..Default::default()});
+    let submitlift = use_state(|| NewLift { lift: "Bench".to_string(), ..Default::default()});
     {
         let lifts = lifts.clone();
         use_effect_with_deps(move |_|{
@@ -124,7 +126,7 @@ fn app() -> Html {
         <>
             <form onsubmit={onsubmithandle}>   
                 <select name="lifts" id="lift select" onchange={onliftchangehandle}>
-                    <option value="Bench">{"Bench"}</option>
+                    <option selected=true value="Bench">{"Bench"}</option>
                     <option value="Squat">{"Squat"}</option>
                     <option value="Deadlift">{"Deadlift"}</option>
                 </select>
